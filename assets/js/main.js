@@ -11,6 +11,14 @@ $(".service_tab .tabs").on("click", function () {
   $("#"+tab).addClass("active in");
 });
 
+$(".service_tab .tabs").on("click", function () {
+  $(".service_tab .tabs").removeClass("active");
+  $(this).addClass("active")
+  $(".service_tab_content .tab-pane").removeClass("active in");
+  const tab = $(this).attr("data-attr")
+  $("#"+tab).addClass("active in");
+});
+
 $(".slick-dots li button").html()
 
 $('.customer_slider').slick({

@@ -297,6 +297,18 @@ h6 {
   color: var(--darkblue);
 }
 
+.btn.hollow-blue:hover {
+  background-color: var(--darkblue);
+  border: 1px solid var(--darkblue);
+  color: #fff;
+}
+
+.btn.hollow-blue {
+  background-color: transparent;
+  border: 1px solid var(--darkblue);
+  color: var(--darkblue);
+}
+
 .btn.bg-red {
   background-color: var(--red);
   border: 1px solid var(--red);
@@ -459,6 +471,10 @@ h6 {
   max-width: 80px;
 }
 
+.service_tab{
+  overflow-x: scroll;
+}
+
 .service_tab_content > .active {
   display: flex;
 }
@@ -486,12 +502,13 @@ h6 {
   right: 44%;
 }
 
-.offer_section, .contact_section {
+.offer_section,
+.contact_section {
   background: url(../../assets/images/offer.png) no-repeat center center;
   background-size: cover;
 }
 
-.contact_section .form-control{
+.contact_section .form-control {
   min-height: 50px;
   background: transparent;
   color: #fff;
@@ -527,7 +544,7 @@ h6 {
   margin-right: 5px;
 }
 
-.slick-dots li.slick-active button{
+.slick-dots li.slick-active button {
   background: #898989;
 }
 
@@ -546,11 +563,12 @@ h6 {
 }
 
 .form-check label:before {
-  content:'';
+  content: "";
   -webkit-appearance: none;
   background-color: transparent;
   border: 1px solid #ced4da;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
   padding: 8px;
   display: inline-block;
   position: relative;
@@ -560,7 +578,7 @@ h6 {
 }
 
 .form-check input:checked + label:after {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: 1px;
@@ -584,7 +602,7 @@ h6 {
 }
 
 .customer_slider .line::before {
-  content: '';
+  content: "";
   width: 100%;
   max-width: 150px;
   height: 3px;
@@ -598,11 +616,131 @@ h6 {
   max-width: 400px;
 }
 
-.customer_slider .fa-star{
+.customer_slider .fa-star {
   font-size: 20px;
   margin-right: 3px;
 }
 
-.fa-star.active{
-  color: #FF7E65;
+.fa-star.active {
+  color: #ff7e65;
+}
+
+.service_tab .tabs button {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 1rem 1.85rem;
+}
+
+.service_tab .tabs.active button:hover {
+  background-color: transparent;
+  border: 1px solid var(--red);
+  color: var(--red);
+}
+
+.service_tab .tabs.active button {
+  background-color: var(--red);
+  border: 1px solid var(--red);
+  color: #fff;
+}
+
+.pricing_section .service_tab .tabs.active::after {
+  display: none;
+}
+
+.price_box {
+  padding: 15px 25px;
+  border: 2px solid var(--red);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  transition: all 0.4s ease-in-out;
+}
+
+.price_box * {
+}
+
+.price_box:hover {
+  color: #fff !important;
+  background: var(--darkblue);
+  border-color: var(--darkblue);
+  transform: scale(1.08);
+}
+
+.price_box:hover .t-blue {
+  color: #fff !important;
+}
+
+.amount {
+  position: relative;
+}
+.amount::after {
+  content: "";
+  width: 104%;
+  height: 2px;
+  background: var(--dark);
+  position: absolute;
+  bottom: 8px;
+  left: -1px;
+}
+
+.task_list {
+  padding-left: 0px;
+  list-style: none;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.task_list li {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.task_list li i {
+  font-size: 14px;
+}
+
+.price_box .btn {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0.75rem 3.85rem;
+  border-radius: 0px;
+}
+
+.price_box:hover .btn {
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--dark);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark);
+}
+
+.price_box:hover .task_list::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.price_box:hover .task_list::-webkit-scrollbar-thumb:hover {
+  background: #fff;
+}
+
+
+.service_tab::-webkit-scrollbar {
+  display: none;
 }
