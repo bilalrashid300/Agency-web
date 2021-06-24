@@ -11,10 +11,26 @@ $(".service_tab .tabs").on("click", function () {
   $("#"+tab).addClass("active in");
 });
 
-$(".service_tab .tabs").on("click", function () {
-  $(".service_tab .tabs").removeClass("active");
+$(".contact_tabs .tabs").on("click", function () {
+  $(".contact_tabs .tabs").removeClass("active");
   $(this).addClass("active")
-  $(".service_tab_content .tab-pane").removeClass("active in");
+  $(".contact_tabs .tab-pane").removeClass("active in");
+  const tab = $(this).attr("data-attr")
+  $("#"+tab).addClass("active in");
+});
+
+$(".pricing_section_tab .tabs").on("click", function () {
+  $(".pricing_section_tab .tabs").removeClass("active");
+  $(this).addClass("active")
+  $(".pricing_section_tab .tab-pane").removeClass("active in");
+  const tab = $(this).attr("data-attr")
+  $("#"+tab).addClass("active in");
+});
+
+$(".company_tab .tabs").on("click", function () {
+  $(".company_tab .tabs").removeClass("active");
+  $(this).addClass("active")
+  $(".company_tab .tab-pane").removeClass("active in");
   const tab = $(this).attr("data-attr")
   $("#"+tab).addClass("active in");
 });

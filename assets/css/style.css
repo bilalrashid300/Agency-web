@@ -109,6 +109,37 @@ h6 {
   background-color: var(--darkblue);
 }
 
+.bg-grey {
+  background-color: #999999;
+}
+
+.flex-grow{
+  flex-grow: 1;
+}
+
+.contact_tabs .tabs img{
+  width: unset !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact_tabs .tabs{
+  background: var(--red);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.contact_tabs .tabs.active{
+  background: #999999;
+}
+
+.contact_tabs .tabs:hover{
+  background: #999999;
+}
+
+.contact_tabs .tabs:hover img{
+  transform: translate(-10px, 0px);
+}
+
 .t-underline {
   text-decoration: underline !important;
 }
@@ -479,6 +510,15 @@ h6 {
   display: flex;
 }
 
+.pricing_section_tab > .active {
+  display: flex;
+}
+
+.company_tab > .active {
+  display: flex;
+}
+
+
 .service_tab_content .row {
   align-items: center;
 }
@@ -503,9 +543,24 @@ h6 {
 }
 
 .offer_section,
-.contact_section {
+.contact_section,
+.services_section{
   background: url(../../assets/images/offer.png) no-repeat center center;
   background-size: cover;
+}
+
+.p-rel{
+  position: relative;
+}
+
+.red-line::after{
+  content: "";
+    height: 6px;
+    width: 70%;
+    background: var(--red);
+    position: absolute;
+    top: 64px;
+    right: 34px;
 }
 
 .contact_section .form-control {
@@ -641,6 +696,64 @@ h6 {
   background-color: var(--red);
   border: 1px solid var(--red);
   color: #fff;
+}
+
+.company_tab .tabs.active {
+  color: var(--red);
+  position: relative;
+}
+
+.company_tab .tabs.active::after {
+  content: "";
+  display: inline-block;
+  margin-left: 0px;
+  vertical-align: 0.255em;
+  content: "";
+  border-bottom: 0.7em solid var(--red);
+  border-right: 0.5em solid transparent;
+  border-top: 0;
+  border-left: 0.5em solid transparent;
+  position: absolute;
+  bottom: -10px;
+  right: 44%;
+}
+
+.company_tab .tab-pane>div {
+  position: relative;
+}
+
+.company_tab .tab-pane>div::after {
+  position: relative;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: var(--red);
+  border-radius: 60px;
+}
+
+/* li:nth-child(3n) {
+  } */
+
+.animation {
+  animation: moveY 2s infinite;
+}
+
+@keyframes moveY{
+
+  0%{
+    transform: translateY(0px);
+  }
+  25%{
+    transform: translateY(-10px);
+  }
+  75%{
+    transform: translateY(10px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+
+
 }
 
 .pricing_section .service_tab .tabs.active::after {
