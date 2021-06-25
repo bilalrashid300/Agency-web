@@ -947,4 +947,13 @@ h6 {
   .hero .row{
     height: 100% !important;
   }
+  .number_tab .red::after {
+    display: none;
+  }
+  .number_tab .red {
+      background-color: var(--red);
+  }
+  .number_tab .red:last-child {
+    padding-left: 15px;
+}
 }
