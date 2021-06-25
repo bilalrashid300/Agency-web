@@ -30,7 +30,43 @@
     <title>Hello, world!</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg d-block pt-0">
+      <div class="container mb-3 d-md-block d-none">
+        <div class="row justify-content-end w-100 mx-0">
+          <div class="col-md-10 bg-blue px-0">
+              <div class="d-flex justify-content-end">
+                <div class="px-3 w-100 d-flex align-items-center flex-grow py-3">
+                  <img src="./assets/images/chat.png" />
+                  <div class=" ml-3">
+                    <p class=" mb-0 w-100 t-white">Whatsapp 24/7:</p>
+                  <p class="fs12 mb-0 w-100 fw-7 t-white">(345)345-3232</p>
+                  </div>
+                </div>
+                <div class="px-3 w-100 d-flex align-items-center flex-grow py-3">
+                  <img src="./assets/images/phone.png" />
+                  <div class=" ml-3">
+                    <p class=" mb-0 w-100 t-white">Call Now:</p>
+                    <p class="fs12 mb-0 w-100 fw-7 t-white">(345)345-3232</p>
+                  </div>
+                </div>
+                <div class="px-3 w-100 d-flex align-items-center flex-grow py-3">
+                  <img src="./assets/images/chat.png" />
+                  <div class=" ml-3">
+                    <p class=" mb-0 w-100 t-white">Email us:</p>
+                  <p class="fs12 mb-0 w-100 fw-7 t-white">info@graphicwolves.com</p>
+                  </div>
+                </div>
+                <div class="px-3 w-100 d-flex align-items-center flex-grow py-3 bg-red">
+                  <img src="./assets/images/chat.png" />
+                  <div class=" ml-3">
+                    <p class=" mb-0 w-100 t-white">Start:</p>
+                  <p class="fs12 mb-0 w-100 fw-7 t-white">Live Chat</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
       <div class="container d-flex">
         <a class="navbar-brand" href="#">LOGO<span>FOLD</span></a>
         <button
@@ -42,7 +78,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <i class="fa fa-bars"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -91,7 +127,7 @@
 
     <section class="hero">
       <div class="container">
-        <div class="row align-item-center" style="height: 650px">
+        <div class="row align-item-center" style="height: 800px">
           <div class="col-md-6 d-flex flex-column justify-content-center">
             <h1 class="hero-title t-red">
               INNOVATIVE LOGO DESIGN & WEB SOLUTIONS
@@ -107,7 +143,7 @@
             </div>
           </div>
           <div
-            class="col-md-6 bg-form d-flex flex-column justify-content-center"
+            class="col-md-6 bg-form py-md-0 py-5 d-flex flex-column justify-content-center"
           >
             <form action="" class="mx-auto">
               <p class="fs16 fw-6">
@@ -142,35 +178,35 @@
 
     <section>
       <div class="container">
-        <div class="row number_tab">
+        <div class="row number_tab bg-blue">
           <div class="col-md-3 py-4 t-white">
             <p class="mb-0">SATISFIED CLIENTS</p>
             <h3 class="mb-0">50,000+</h3>
             <p class="mb-0">LOGO & WEB PROJECTS</p>
           </div>
-          <div class="col-md bg-red t-white fs12 py-4">
+          <div class="col-md t-white fs12 py-4 red">
             <p class="mb-0 fs18 fw-7">80+</p>
             <p class="mb-0">AWARD WINNING DESIGNERS</p>
           </div>
-          <div class="col-md bg-blue t-white fs12 py-4">
+          <div class="col-md t-white fs12 py-4">
             <p class="mb-0 fs18 fw-7">80+</p>
             <p class="mb-0">AWARD WINNING DESIGNERS</p>
           </div>
-          <div class="col-md bg-red t-white fs12 py-4">
+          <div class="col-md t-white fs12 py-4 red">
             <p class="mb-0 fs18 fw-7">80+</p>
             <p class="mb-0">AWARD WINNING DESIGNERS</p>
           </div>
-          <div class="col-md bg-blue t-white fs12 py-4">
+          <div class="col-md t-white fs12 py-4">
             <p class="mb-0 fs18 fw-7">80+</p>
             <p class="mb-0">AWARD WINNING DESIGNERS</p>
           </div>
-          <div class="col-md-2 t-white fs12 py-4 bg-red">
+          <div class="col-md-2 t-white fs12 py-4 red">
             <p class="mb-0 fs18 fw-7">80+</p>
             <p class="mb-0">AWARD WINNING DESIGNERS</p>
           </div>
         </div>
         <div class="row align-items-center faq mb-5">
-          <div class="col-md-4">
+          <div class="col-md-4 mb-3 mb-md-0">
             <p class="fw-6 t-blue mb-2">Frequently Ask Question</p>
             <div class="input-group">
               <select
@@ -262,6 +298,7 @@
               border-bottom-red
               pt-3
               service_tab
+              mb-5 mb-md-0
             "
           >
             <div class="text-center tabs active pb-3" data-attr="tab-panel1">
@@ -376,7 +413,7 @@
                   </div>
                 </div>
                 <div class="col-md-5">
-                  <img class="w-10 animation" src="./assets/images/cms.png" />
+                  <img class="w-100 animation" src="./assets/images/cms.png" />
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade row" id="tab-panel5">
@@ -411,13 +448,13 @@
       <div class="container-fluid services_section">
         <div class="container py-5">
           <div class="row mb-3">
-            <div class="col-6">
+            <div class="col-md-6">
               <h2 class="p-rel t-white">
                 Brand identities, websites &
                 <span class="red-line t-red">more!</span>
               </h2>
             </div>
-            <div class="col-6 px-5">
+            <div class="col-md-6 px-md-5">
               <div class="d-flex justify-content-center align-items-end h-100 company_tab border-bottom-red">
                 <p class="mb-2 fw-7 t-white px-3 tabs active" data-attr="tab-company1">Logo</p>
                 <p class="mb-2 fw-7 t-white px-3 tabs" data-attr="tab-company2">Website</p>
@@ -553,7 +590,7 @@
     <section>
       <div class="container pricing_section pt-5">
         <div class="row justify-content-center">
-          <div class="col-8">
+          <div class="col-md-8">
             <h2 class="border-bottom-red pb-3 t-blue text-center mb-3">
               Offering Web Design at Affordable Prices with Unique Packages
             </h2>
@@ -570,7 +607,7 @@
             class="
               col-md-12
               d-flex
-              justify-content-center
+              justify-content-md-center
               pt-3
               pricing_section_tab
             "
@@ -1700,7 +1737,7 @@
             </div>
             <div class="col-md-7">
               <div class="row">
-                <div class="col-md-6">
+                <div class="col-6">
                   <p class="fs16 fw-7 t-yellow mb-2">LOGO DESIGN</p>
                   <p class="fs12 mb-2">UNLIMITED CONCEPTS</p>
                   <p class="fs12 mb-2">FREE ICON</p>
@@ -1722,7 +1759,7 @@
                   <p class="fs12 mb-2">FREE ICON</p>
                   <p class="fs12 mb-2">FREE GRAYSCALE COP</p>
                 </div>
-                <div class="col-md-6">
+                <div class="col-6">
                   <p class="fs16 fw-7 t-yellow mb-2">LOGO DESIGN</p>
                   <p class="fs12 mb-2">UNLIMITED CONCEPTS</p>
                   <p class="fs12 mb-2">FREE ICON</p>
@@ -1741,13 +1778,13 @@
             <div class="col-md-5 px-5">
               <img class="w-100" src="./assets/images/offer_1.png" />
             </div>
-            <div class="col-md-12 mt-5">
-              <img class="" src="./assets/images/best_seller.png" />
-              <img class="" src="./assets/images/premium.png" />
+            <div class="col-md-12 d-md-block d-flex justify-content-between mt-5">
+              <img class="brand-logo" src="./assets/images/best_seller.png" />
+              <img class="brand-logo" src="./assets/images/premium.png" />
             </div>
             <div class="col-md-12 text-center mt-5">
-              <button class="btn hollow-white">LET’S GET STARTED</button>
-              <button class="btn hollow-white ml-md-2">
+              <button class="btn hollow-white mb-3">LET’S GET STARTED</button>
+              <button class="btn hollow-white ml-md-2 mb-3">
                 VIEW COMPLETE PRICING
               </button>
             </div>
@@ -1773,7 +1810,7 @@
           <div class="col-12 service_slider">
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/24.png"
                 alt=""
               />
@@ -1781,7 +1818,7 @@
             </div>
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/clock.png"
                 alt=""
               />
@@ -1789,7 +1826,7 @@
             </div>
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/24.png"
                 alt=""
               />
@@ -1797,7 +1834,7 @@
             </div>
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/clock.png"
                 alt=""
               />
@@ -1805,7 +1842,7 @@
             </div>
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/24.png"
                 alt=""
               />
@@ -1813,7 +1850,7 @@
             </div>
             <div class="service_box mb-3">
               <img
-                class="mt-5 w-100 px-5"
+                class="mt-5 w-100 px-md-5"
                 src="./assets/images/clock.png"
                 alt=""
               />
@@ -1828,7 +1865,7 @@
       <div class="container-fluid bg-blue">
         <div class="container">
           <div class="row">
-            <div class="col-md-7 py-5 tab-content contact_tabs">
+            <div class="col-md-7 py-5 tab-content contact_tabs order-2 order-md-1">
               <div
                 role="tabpanel"
                 class="tab-pane fade active in"
@@ -1894,6 +1931,7 @@
                 d-flex
                 flex-column
                 contact_tabs
+                px-md-3 px-0 mt-md-0 mt-3
               "
             >
               <div
@@ -1905,28 +1943,30 @@
                   flex-grow
                   tabs
                   active
+                  py-md-0 py-3
+                  order-1 order-md-2
                 "
                 data-attr="contact-panel1"
               >
                 <img src="./assets/images/phone.png" />
-                <p class="fs22 mb-0 w-100">Call us</p>
+                <p class="fs22 mb-0 w-100 ">Call us</p>
               </div>
               <div
-                class="px-5 w-100 d-flex align-items-center flex-grow tabs"
+                class="px-5 w-100 d-flex align-items-center flex-grow tabs py-md-0 py-3"
                 data-attr="contact-panel2"
               >
                 <img src="./assets/images/chat.png" />
                 <p class="fs22 mb-0 w-100">Talk to our Repesentative</p>
               </div>
               <div
-                class="px-5 w-100 d-flex align-items-center flex-grow tabs"
+                class="px-5 w-100 d-flex align-items-center flex-grow tabs py-md-0 py-3"
                 data-attr="contact-panel3"
               >
                 <img src="./assets/images/phone.png" />
                 <p class="fs22 mb-0 w-100">Request a Call Back</p>
               </div>
               <div
-                class="px-5 w-100 d-flex align-items-center flex-grow tabs"
+                class="px-5 w-100 d-flex align-items-center flex-grow tabs py-md-0 py-3"
                 data-attr="contact-panel4"
               >
                 <img src="./assets/images/chat.png" />
@@ -1941,7 +1981,7 @@
     <section>
       <div class="container py-5">
         <div class="row justify-content-center">
-          <div class="col-8 text-center">
+          <div class="col-md-8 text-center">
             <h1 class="hero-title t-blue border-bottom-red pb-2 mb-3">
               Customer’s Trust
             </h1>
@@ -1962,7 +2002,7 @@
                 />
               </div>
               <div class="col-md-7 pl-md-5">
-                <h2 class="fw-5 t-red">
+                <h2 class="fw-5 t-red mt-md-0 mt-5">
                   <img class="quot" src="./assets/images/quot.png" alt="" />
                   Extemely Satisfied with the services!
                 </h2>
@@ -1992,7 +2032,7 @@
                 />
               </div>
               <div class="col-md-7 pl-md-5">
-                <h2 class="fw-5 t-red">
+                <h2 class="fw-5 t-red mt-md-0 mt-5">
                   <img class="quot" src="./assets/images/quot.png" alt="" />
                   Extemely Satisfied with the services!
                 </h2>
@@ -2022,7 +2062,7 @@
                 />
               </div>
               <div class="col-md-7 pl-md-5">
-                <h2 class="fw-5 t-red">
+                <h2 class="fw-5 t-red mt-md-0 mt-5">
                   <img class="quot" src="./assets/images/quot.png" alt="" />
                   Extemely Satisfied with the services!
                 </h2>
@@ -2052,7 +2092,7 @@
                 />
               </div>
               <div class="col-md-7 pl-md-5">
-                <h2 class="fw-5 t-red">
+                <h2 class="fw-5 t-red mt-md-0 mt-5">
                   <img class="quot" src="./assets/images/quot.png" alt="" />
                   Extemely Satisfied with the services!
                 </h2>
@@ -2080,10 +2120,9 @@
 
     <section>
       <div class="container-fluid contact_section">
-        px-0">
         <div class="container py-5">
           <div class="row justify-content-center">
-            <div class="col-8 t-white text-center">
+            <div class="col-md-8 t-white text-center">
               <h1 class="hero-title border-bottom-red pb-2 mb-3">
                 GET FREE CONSULTATION
               </h1>
@@ -2181,19 +2220,19 @@
 
     <footer>
       <div class="container-fluid px-0 bg-red py-5">
-        <div class="container t-white">
+        <div class="container t-white text-md-left text-center">
           <div class="row">
             <div class="col-md-4">
               <h1>EMAIL</h1>
-              <p class="fs16 mb-0 fw-5">support@logofold.com</p>
+              <p class="fs16 mb-md-0 fw-5 mb-3">support@logofold.com</p>
             </div>
             <div class="col-md-4">
               <h1>CONTACT</h1>
-              <p class="fs16 mb-0 fw-5">info@logofold.com</p>
+              <p class="fs16 mb-md-0 fw-5 mb-3">info@logofold.com</p>
             </div>
             <div class="col-md-4">
               <h1>PHONE</h1>
-              <p class="fs16 mb-0 fw-5">+1-888 - 655 - 5658</p>
+              <p class="fs16 mb-md-0 fw-5 mb-3">+1-888 - 655 - 5658</p>
             </div>
           </div>
         </div>
@@ -2215,7 +2254,7 @@
             </p>
           </div>
           <div class="col-md-1"></div>
-          <div class="col-md mt-2">
+          <div class="col-md col-6 mt-2">
             <p class="fw-6">QUICK LINKS</p>
             <p class=""><a href="#" class="t-dark">Home</a></p>
             <p class=""><a href="#" class="t-dark">Services</a></p>
@@ -2223,14 +2262,14 @@
             <p class=""><a href="#" class="t-dark">Contact us</a></p>
             <p class=""><a href="#" class="t-dark">Why us</a></p>
           </div>
-          <div class="col-md mt-2">
+          <div class="col-md col-6 mt-2">
             <p class="fw-6">SERVICES</p>
-            <p class=""><a href="#" class="t-dark">Graohic Designing</a></p>
+            <p class=""><a href="#" class="t-dark">Graphic Designing</a></p>
             <p class=""><a href="#" class="t-dark">Web Development</a></p>
             <p class=""><a href="#" class="t-dark">Online Marketing</a></p>
             <p class=""><a href="#" class="t-dark">Video Animation</a></p>
           </div>
-          <div class="col-md mt-2">
+          <div class="col-md col-6 mt-2">
             <p class="fw-6">SERVICES</p>
             <p class=""><a href="#" class="t-dark">+1-888 - 655 - 5658</a></p>
             <p class=""><a href="#" class="t-dark">support@logofold.com</a></p>

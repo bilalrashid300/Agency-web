@@ -35,6 +35,12 @@ $(".company_tab .tabs").on("click", function () {
   $("#"+tab).addClass("active in");
 });
 
+$("#navbarSupportedContent").on("show.bs.collapse",function(){
+  $(".navbar").addClass("open")
+}).on("hidden.bs.collapse",function(){
+  $(".navbar").removeClass("open")
+})
+
 $(".slick-dots li button").html()
 
 $('.customer_slider').slick({

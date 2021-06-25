@@ -113,30 +113,30 @@ h6 {
   background-color: #999999;
 }
 
-.flex-grow{
+.flex-grow {
   flex-grow: 1;
 }
 
-.contact_tabs .tabs img{
+.contact_tabs .tabs img {
   width: unset !important;
   transition: all 0.3s ease-in-out;
 }
 
-.contact_tabs .tabs{
+.contact_tabs .tabs {
   background: var(--red);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
-.contact_tabs .tabs.active{
+.contact_tabs .tabs.active {
   background: #999999;
 }
 
-.contact_tabs .tabs:hover{
+.contact_tabs .tabs:hover {
   background: #999999;
 }
 
-.contact_tabs .tabs:hover img{
+.contact_tabs .tabs:hover img {
   transform: translate(-10px, 0px);
 }
 
@@ -265,6 +265,10 @@ h6 {
   line-height: 40px;
 }
 
+.navbar{
+  z-index: 100;
+}
+
 .navbar-nav {
   z-index: 10;
 }
@@ -306,7 +310,7 @@ h6 {
   background: url(../images/hero-bg.png) center center no-repeat;
   background-size: cover;
   min-height: 650px;
-  margin-top: -77px;
+  margin-top: -165px;
 }
 
 .btn {
@@ -502,7 +506,7 @@ h6 {
   max-width: 80px;
 }
 
-.service_tab{
+.service_tab {
   overflow-x: scroll;
 }
 
@@ -510,14 +514,25 @@ h6 {
   display: flex;
 }
 
+.service_tab .tabs {
+  min-width: 210px;
+}
+
 .pricing_section_tab > .active {
   display: flex;
+}
+
+.pricing_section_tab {
+  overflow-y: scroll;
+}
+
+.pricing_section_tab .tabs {
+  min-width: 273px;
 }
 
 .company_tab > .active {
   display: flex;
 }
-
 
 .service_tab_content .row {
   align-items: center;
@@ -544,23 +559,23 @@ h6 {
 
 .offer_section,
 .contact_section,
-.services_section{
+.services_section {
   background: url(../../assets/images/offer.png) no-repeat center center;
   background-size: cover;
 }
 
-.p-rel{
+.p-rel {
   position: relative;
 }
 
-.red-line::after{
+.red-line::after {
   content: "";
-    height: 6px;
-    width: 70%;
-    background: var(--red);
-    position: absolute;
-    top: 64px;
-    right: 34px;
+  height: 6px;
+  width: 70%;
+  background: var(--red);
+  position: absolute;
+  top: 64px;
+  right: 34px;
 }
 
 .contact_section .form-control {
@@ -718,11 +733,11 @@ h6 {
   right: 44%;
 }
 
-.company_tab .tab-pane>div {
+.company_tab .tab-pane > div {
   position: relative;
 }
 
-.company_tab .tab-pane>div::after {
+.company_tab .tab-pane > div::after {
   position: relative;
   content: "";
   width: 50px;
@@ -738,22 +753,19 @@ h6 {
   animation: moveY 2s infinite;
 }
 
-@keyframes moveY{
-
-  0%{
+@keyframes moveY {
+  0% {
     transform: translateY(0px);
   }
-  25%{
+  25% {
     transform: translateY(-10px);
   }
-  75%{
+  75% {
     transform: translateY(10px);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
-
-
 }
 
 .pricing_section .service_tab .tabs.active::after {
@@ -853,7 +865,86 @@ h6 {
   background: #fff;
 }
 
-
-.service_tab::-webkit-scrollbar {
+.service_tab::-webkit-scrollbar,
+.pricing_section_tab::-webkit-scrollbar {
   display: none;
+}
+
+.brand-logo {
+  max-width: 200px;
+}
+
+.navbar.open{
+  min-height: 110vh;
+  align-items: flex-start;
+  overflow-x: hidden;
+}
+
+.number_tab{
+  overflow:hidden;
+}
+
+.number_tab .red:after {
+  background: var(--red);
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	-webkit-transform: skew(-9deg);
+	-moz-transform: skew(-9deg); 
+	-o-transform: skew(-9deg); 
+	z-index: -1;
+}
+
+.number_tab .red:last-child::after {
+  background: var(--red);
+	left: 10px;
+}
+
+.number_tab .red:last-child::after {
+  background: var(--red);
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 10px;
+	-webkit-transform: skew(-9deg);
+	-moz-transform: skew(-9deg); 
+	-o-transform: skew(-9deg); 
+	z-index: -1;
+}
+
+.number_tab .red:last-child{
+  padding-left: 25px;
+}
+
+@media (max-width: 786px) {
+  .red-line::after {
+    display: none;
+  }
+  .brand-logo {
+    max-width: 130px;
+  }
+  .quot {
+    position: absolute;
+    left: 12px;
+    top: -4px;
+  }
+  .border-left-red{
+    border-left: none;
+  }
+  .hero {
+    background: url(../images/hero-bg.png) center center no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    margin-top: -77px;
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+  .hero .row{
+    height: 100% !important;
+  }
 }
