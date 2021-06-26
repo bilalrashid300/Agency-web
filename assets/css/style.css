@@ -265,7 +265,7 @@ h6 {
   line-height: 40px;
 }
 
-.navbar{
+.navbar {
   z-index: 100;
 }
 
@@ -842,6 +842,7 @@ h6 {
 /* Track */
 ::-webkit-scrollbar-track {
   border-radius: 10px;
+  background: #e3e3e3;
 }
 
 /* Handle */
@@ -874,52 +875,100 @@ h6 {
   max-width: 200px;
 }
 
-.navbar.open{
+.navbar.open {
   min-height: 110vh;
   align-items: flex-start;
   overflow-x: hidden;
 }
 
-.number_tab{
-  overflow:hidden;
+.number_tab {
+  overflow: hidden;
 }
 
 .number_tab .red:after {
   background: var(--red);
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	-webkit-transform: skew(-9deg);
-	-moz-transform: skew(-9deg); 
-	-o-transform: skew(-9deg); 
-	z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: skew(-9deg);
+  -moz-transform: skew(-9deg);
+  -o-transform: skew(-9deg);
+  z-index: -1;
 }
 
 .number_tab .red:last-child::after {
   background: var(--red);
-	left: 10px;
+  left: 10px;
 }
 
 .number_tab .red:last-child::after {
   background: var(--red);
-	position: absolute;
-	content: '';
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 10px;
-	-webkit-transform: skew(-9deg);
-	-moz-transform: skew(-9deg); 
-	-o-transform: skew(-9deg); 
-	z-index: -1;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 10px;
+  -webkit-transform: skew(-9deg);
+  -moz-transform: skew(-9deg);
+  -o-transform: skew(-9deg);
+  z-index: -1;
 }
 
-.number_tab .red:last-child{
+.number_tab .red:last-child {
   padding-left: 25px;
 }
+
+#services .discount_popup {
+  position: absolute;
+  right: 0;
+  z-index: 1;
+}
+
+#services .discount_popup .icon_box {
+  background: var(--darkblue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#services .discount_popup .text_box {
+  background: var(--red);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#services .discount_popup .text_box p {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-weight: 700;
+  color: #fff;
+  background: var(--darkblue);
+  margin: 0px !important;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+#services .discount_popup .text_box .icon_box {
+  background: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+#services .discount_popup .text_box:hover .icon_box {
+  margin-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+}
+
 
 @media (max-width: 786px) {
   .red-line::after {
@@ -933,7 +982,7 @@ h6 {
     left: 12px;
     top: -4px;
   }
-  .border-left-red{
+  .border-left-red {
     border-left: none;
   }
   .hero {
@@ -944,16 +993,16 @@ h6 {
     padding-top: 100px;
     margin-bottom: 30px;
   }
-  .hero .row{
+  .hero .row {
     height: 100% !important;
   }
   .number_tab .red::after {
     display: none;
   }
   .number_tab .red {
-      background-color: var(--red);
+    background-color: var(--red);
   }
   .number_tab .red:last-child {
     padding-left: 15px;
-}
+  }
 }
