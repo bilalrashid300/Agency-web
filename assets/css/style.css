@@ -76,6 +76,10 @@ h6 {
   color: var(--dark);
 }
 
+.t-black {
+  color: #000;
+}
+
 .t-red,
 .t-red:hover {
   color: var(--red);
@@ -115,6 +119,10 @@ h6 {
 
 .flex-grow {
   flex-grow: 1;
+}
+
+.w-fit {
+  width: fit-content;
 }
 
 .contact_tabs .tabs img {
@@ -265,6 +273,11 @@ h6 {
   line-height: 40px;
 }
 
+.fs54 {
+  font-size: 54px;
+  line-height: 64px;
+}
+
 .navbar {
   z-index: 100;
 }
@@ -274,8 +287,8 @@ h6 {
 }
 
 .navbar-nav .nav-link {
-  color: var(--dark);
-  font-weight: 600;
+  color: var(--darkblue);
+  font-weight: 700;
 }
 
 .navbar-brand {
@@ -293,7 +306,8 @@ h6 {
   color: #fff !important;
   background-color: var(--red);
   padding: 0.45rem;
-  border-radius: 60px;
+  border-radius: 0px;
+  font-weight: 700;
 }
 
 .nav-item.dropdown .dropdown-toggle::after {
@@ -309,8 +323,11 @@ h6 {
 .hero {
   background: url(../images/hero-bg.png) center center no-repeat;
   background-size: cover;
-  min-height: 650px;
-  margin-top: -165px;
+}
+
+.shadow {
+  text-shadow: 2px 2px 11px #000;
+  box-shadow: none !important;
 }
 
 .btn {
@@ -516,6 +533,11 @@ h6 {
 
 .service_tab .tabs {
   min-width: 210px;
+  transition: all 0.4s ease-in-out;
+}
+
+.service_tab .tabs.active {
+  transform: scale(1.1);
 }
 
 .pricing_section_tab > .active {
@@ -557,15 +579,60 @@ h6 {
   right: 44%;
 }
 
-.offer_section,
 .contact_section,
 .services_section {
   background: url(../../assets/images/offer.png) no-repeat center center;
   background-size: cover;
 }
 
+.offer_section {
+  background: url(../../assets/images/bg-offer.png) no-repeat center center;
+  background-size: cover;
+}
+
 .p-rel {
   position: relative;
+}
+
+.contact_section .form-control::placeholder {
+  color: #fff;
+  font-weight: 300;
+}
+
+.contact_section .btn {
+  background: transparent !important;
+
+}
+
+select.form-control {
+  -webkit-appearance: none;
+  position: relative;
+}
+
+select option{
+  color: #000;
+}
+
+.select::after {
+  margin-left: 0.255em;
+  content: "";
+  border-right: 0.4em solid transparent;
+  border-bottom: 0;
+  border-top: 0.7em solid var(--red);
+  border-left: 0.4em solid transparent;
+  vertical-align: 0.11em;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 19px;
+  right: 19px;
+}
+
+.logo_cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 130px;
+  overflow: hidden;
 }
 
 .red-line::after {
@@ -576,6 +643,28 @@ h6 {
   position: absolute;
   top: 64px;
   right: 34px;
+}
+
+.testimonial_section img {
+  box-shadow: 0px 0px 11px;
+}
+
+.testimonial_section .quot {
+  box-shadow: none;
+}
+
+.footer-link {
+  position: relative;
+}
+
+.footer-link::after {
+  position: absolute;
+  top: 6px;
+  left: -15px;
+  width: 7px;
+  height: 8px;
+  background: var(--red);
+  content: '';
 }
 
 .contact_section .form-control {
@@ -729,7 +818,7 @@ h6 {
   border-top: 0;
   border-left: 0.5em solid transparent;
   position: absolute;
-  bottom: -10px;
+  bottom: -17px;
   right: 44%;
 }
 
@@ -772,12 +861,20 @@ h6 {
   display: none;
 }
 
+.pricing_section .btn:hover {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
 .price_box {
   padding: 15px 25px;
   border: 2px solid var(--red);
   border-radius: 15px;
   margin-bottom: 20px;
   transition: all 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .price_box * {
@@ -824,6 +921,16 @@ h6 {
   font-size: 14px;
 }
 
+.task_list::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.task_list::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
 .price_box .btn {
   font-size: 12px;
   font-weight: 600;
@@ -854,16 +961,6 @@ h6 {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--dark);
-}
-
-.price_box:hover .task_list::-webkit-scrollbar-thumb {
-  background: #fff;
-  border-radius: 10px;
-}
-
-/* Handle on hover */
-.price_box:hover .task_list::-webkit-scrollbar-thumb:hover {
-  background: #fff;
 }
 
 .service_tab::-webkit-scrollbar,
@@ -969,6 +1066,20 @@ h6 {
   padding-right: 5px;
 }
 
+.best_seller {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--red);
+  width: fit-content;
+  text-align: center;
+  padding: 0.45rem 2rem;
+  position: absolute;
+  right: -38px;
+  top: 25px;
+  transform: rotate(45deg);
+}
 
 @media (max-width: 786px) {
   .red-line::after {
