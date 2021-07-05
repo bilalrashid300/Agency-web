@@ -39,8 +39,8 @@ h6 {
 }
 
 h1 {
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 45px;
+  line-height: 55px;
 }
 
 h2 {
@@ -320,9 +320,119 @@ h6 {
   transform: rotate(180deg);
 }
 
+.bannerSliderWrapper {
+  position: relative;
+}
+
+.sliderPagination {
+  display: inline-block;
+  position: absolute;
+  right: 10%;
+  bottom: 25%;
+}
+
+.bannerSliderWrapper span.arrows.prev {
+  left: 5px;
+  border-color: var(--red);
+}
+
+.bannerSliderWrapper span.arrows.next {
+  right: 5px;
+  border-color: #888889;
+  line-height: 34px;
+}
+
+.bannerSliderWrapper span.arrows {
+  width: 38px;
+  height: 38px;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  z-index: 2;
+  cursor: pointer;
+  line-height: 38px;
+  text-align: center;
+  font-weight: 300;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.bannerSliderWrapper span.arrows .arrow-up,
+.bannerSliderWrapper span.arrows .arrow-down {
+  position: relative;
+}
+
+.bannerSliderWrapper span.arrows .arrow-down::after {
+  display: inline-block;
+  margin-left: 0px;
+  margin-top: 13px;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.7em solid var(--red);
+  border-right: 0.4em solid transparent;
+  border-bottom: 0;
+  border-left: 0.4em solid transparent;
+}
+
+.bannerSliderWrapper span.arrows .arrow-up::after {
+  display: inline-block;
+  margin-left: 0px;
+  margin-top: 12px;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0;
+  border-right: 0.4em solid transparent;
+  border-bottom: 0.7em solid #888889;
+  border-left: 0.4em solid transparent;
+}
+
+.bannerSliderWrapper ul.slick-dots {
+  position: absolute;
+  right: 8%;
+  bottom: 0px;
+  margin: auto;
+  top: 28%;
+  bottom: 40%;
+  display: block;
+}
+
+.bannerSliderWrapper ul.slick-dots li {
+  position: relative;
+  display: block;
+  height: auto;
+  text-align: right;
+  width: auto;
+  margin: 0px;
+  padding: 0 0px 10px;
+  cursor: pointer;
+}
+
+.bannerSliderWrapper ul.slick-dots li button {
+  font-size: 0px;
+  background: #fff;
+  border: none;
+  width: 25px;
+  height: 5px;
+  border-radius: 0px;
+  -webkit-transition: all 0.4s ease-In-out;
+  -moz-transition: all 0.4s ease-In-out;
+  -o-transition: all 0.4s ease-In-out;
+  transition: all 0.4s ease-In-out;
+}
+
+.bannerSliderWrapper ul.slick-dots li.slick-active button {
+  width: 50px;
+  background: var(--red);
+}
+
 .hero {
-  background: url(../images/hero-bg.png) center center no-repeat;
+  background: url(../images/banner1.png) center center no-repeat;
   background-size: cover;
+}
+
+.hero .fs18 {
+  line-height: 23px;
 }
 
 .shadow {
@@ -388,7 +498,7 @@ h6 {
 .btn.hollow-white:hover {
   background-color: #fff;
   border: 1px solid #fff;
-  color: var(--blue);
+  color: var(--dark);
 }
 
 .btn.hollow-white {
@@ -579,10 +689,15 @@ h6 {
   right: 44%;
 }
 
+.overflow-y-scroll {
+  overflow-y: scroll;
+}
+
 .contact_section,
 .services_section {
   background: url(../../assets/images/offer.png) no-repeat center center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .offer_section {
@@ -601,7 +716,6 @@ h6 {
 
 .contact_section .btn {
   background: transparent !important;
-
 }
 
 select.form-control {
@@ -609,7 +723,7 @@ select.form-control {
   position: relative;
 }
 
-select option{
+select option {
   color: #000;
 }
 
@@ -664,7 +778,7 @@ select option{
   width: 7px;
   height: 8px;
   background: var(--red);
-  content: '';
+  content: "";
 }
 
 .contact_section .form-control {
@@ -963,6 +1077,7 @@ select option{
   background: var(--dark);
 }
 
+.overflow-y-scroll::-webkit-scrollbar,
 .service_tab::-webkit-scrollbar,
 .pricing_section_tab::-webkit-scrollbar {
   display: none;
@@ -1097,15 +1212,21 @@ select option{
     border-left: none;
   }
   .hero {
-    background: url(../images/hero-bg.png) center center no-repeat;
+    background: url(../images/banner1.png) center center no-repeat;
     background-size: cover;
     min-height: 100vh;
-    margin-top: -77px;
+    /* margin-top: -77px;
     padding-top: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; */
   }
   .hero .row {
-    height: 100% !important;
+    height: 86vh !important;
+  }
+  .sliderPagination {
+    display: inline-block;
+    position: absolute;
+    right: 21%;
+    bottom: 25%;
   }
   .number_tab .red::after {
     display: none;
@@ -1115,5 +1236,9 @@ select option{
   }
   .number_tab .red:last-child {
     padding-left: 15px;
+  }
+  h1 {
+    font-size: 30px;
+    line-height: 40px;
   }
 }

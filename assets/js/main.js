@@ -43,6 +43,21 @@ $("#navbarSupportedContent").on("show.bs.collapse",function(){
 
 $(".slick-dots li button").html()
 
+$('.bannerSlider').slick({
+  dots: true,
+  infinite: true,
+  arrows: true,
+  speed: 1000,
+  vertical: true,
+  verticalSwiping: true,
+  autoplay: false,
+  autoplaySpeed: 4000,
+  slidesToShow: 1,
+  adaptiveHeight: false,
+  prevArrow: $('.prev'),
+  nextArrow: $('.next'),
+});
+
 $('.customer_slider').slick({
   arrows: false,
   dots: true,
