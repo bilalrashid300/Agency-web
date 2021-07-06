@@ -95,7 +95,7 @@ $('.service_slider').slick({
     {
       breakpoint: 480,
       settings: {
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1
       }
     }

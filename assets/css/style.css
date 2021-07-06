@@ -426,6 +426,75 @@ h6 {
   background: var(--red);
 }
 
+.bannerSliderWrapper ul.slick-dots li button:before {
+  position: absolute;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 500;
+  top: 0px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  opacity: 0;
+  left: -160px;
+  letter-spacing: 2px;
+  width: 150px;
+}
+
+.bannerSliderWrapper ul.slick-dots li:nth-child(1) button:before {
+  content: "Logo Design";
+}
+
+.bannerSliderWrapper ul.slick-dots li:nth-child(2) button:before {
+  content: "Development";
+}
+
+.bannerSliderWrapper ul.slick-dots li:nth-child(3) button:before {
+  content: "Marketing";
+}
+
+.bannerSliderWrapper ul.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.inputBoxWrapper{
+  background: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  width: fit-content;
+  padding: 2px;
+  padding-right: 7px;
+}
+
+.inputBoxWrapper Form{
+  display: flex;
+  align-items: center;
+}
+
+.inputBoxWrapper input{
+  border-radius: 0px;
+  border: none;
+  border-left: 2px solid var(--dark);
+  max-width: 160px;
+}
+
+.inputBoxWrapper button{
+  width: 28px;
+  height: 28px;
+  border: none;
+  border-radius: 100%;
+  background: var(--dark);
+  color: #fff;
+}
+
+.inputBoxWrapper input:first-child{
+  border-left: 0px !important;
+}
+
 .hero {
   background: url(../images/banner1.png) center center no-repeat;
   background-size: cover;
@@ -779,6 +848,11 @@ select option {
   height: 8px;
   background: var(--red);
   content: "";
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover::after{
+  left: -20px;
 }
 
 .contact_section .form-control {
@@ -1241,4 +1315,8 @@ select option {
     font-size: 30px;
     line-height: 40px;
   }
+  .bannerSliderWrapper ul.slick-dots li.slick-active button:before {
+    opacity: 0 !important;
+  }
+  
 }
