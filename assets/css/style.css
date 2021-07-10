@@ -134,15 +134,16 @@ h6 {
   background: var(--red);
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin: .5px;
 }
 
-.contact_tabs .tabs.active {
+/* .contact_tabs .tabs.active {
   background: #999999;
 }
 
 .contact_tabs .tabs:hover {
   background: #999999;
-}
+} */
 
 .contact_tabs .tabs:hover img {
   transform: translate(-10px, 0px);
@@ -280,6 +281,8 @@ h6 {
 
 .navbar {
   z-index: 100;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
 .navbar-nav {
@@ -636,7 +639,7 @@ h6 {
   opacity: 1;
 }
 
-.faq select {
+.faq .dropdown button {
   font-family: var(--font-family);
   border: 2px solid var(--darkblue);
   border-radius: 60px !important;
@@ -645,14 +648,20 @@ h6 {
   font-weight: 600;
   color: var(--dark);
   position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 14px;
 }
 
+.faq .dropdown button::after {
+  display: none;
+}
 .form-control:focus {
   border-color: inherit;
   box-shadow: inherit;
 }
 
-.faq .input-group select ~ div {
+.faq .input-group .dropdown + div {
   background: var(--red);
   position: absolute;
   top: 8px;
@@ -666,7 +675,7 @@ h6 {
   z-index: 10;
 }
 
-.faq .input-group select ~ div::after {
+.faq .input-group .dropdown + div::after {
   display: inline-block;
   margin-left: 0px;
   vertical-align: 0.255em;
@@ -675,6 +684,65 @@ h6 {
   border-right: 0.3em solid transparent;
   border-bottom: 0;
   border-left: 0.3em solid transparent;
+}
+
+.faq .dropdown-menu {
+  background: var(--red);
+  border-radius: 10px;
+  width: 100%;
+  margin: 0px;
+  padding: 0;
+  border: none;
+}
+
+.faq .dropdown-item{
+  margin: 0px;
+  padding: .75rem 1.25rem;
+  transition: all 0.4s ease-in-out;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.faq .dropdown-item:hover{
+  background: #fff;
+  color: var(--red);
+}
+
+.faq .dropdown-menu.show{
+  top: 5px !important;
+}
+
+.service_slider .service_box{
+  transition: all 0.4s ease-in-out;
+}
+
+.service_slider .service_box:hover{
+  background: var(--darkblue);
+  color: #fff !important;
+  border-color: var(--darkblue);
+}
+
+.service_slider .service_box:hover .t-red{
+  color: #fff !important;
+}
+
+/* 
+.faq .select_tab{
+  position: relative;
+}
+
+.faq .tab-pane{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  transform: translate(0px, 70px);
+} */
+
+.faq .tab-pane.fade.active.in{
+  transform: translate(0px, 0px);
 }
 
 .border-left-red {
@@ -725,10 +793,7 @@ h6 {
 
 .pricing_section_tab {
   overflow-y: scroll;
-}
-
-.pricing_section_tab .tabs {
-  min-width: 273px;
+  overflow: visible;
 }
 
 .company_tab > .active {
@@ -874,6 +939,34 @@ select option {
   min-height: 240px;
 }
 
+.nextBtn, .prevBtn, .nextBtn3, .prevBtn3{
+  background: none;
+  border:none;
+  color: var(--dark);
+  font-size: 40px;
+  position: absolute;
+}
+
+.prevBtn{
+  top: 57%;
+  left: -30px;
+}
+
+.nextBtn{
+  top: 57%;
+  right: -30px;
+}
+
+.prevBtn3{
+  top: 43%;
+  left: -40px;
+}
+
+.nextBtn3{
+  top: 43%;
+  right: -40px;
+}
+
 .slick-dots {
   list-style: none;
   padding-left: 0px;
@@ -892,8 +985,30 @@ select option {
 }
 
 .slick-dots li.slick-active button {
-  background: #898989;
+  background: var(--red);
 }
+
+.btnContainer{
+  position: absolute;
+  bottom: 50px;
+  right: 25px;
+  display: flex;
+}
+
+.btnContainer button{
+  background: var(--red);
+  border: none;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+}
+
+
 
 .form-check input {
   padding: 0;
@@ -1209,9 +1324,20 @@ select option {
 }
 
 #services .discount_popup {
-  position: absolute;
+  position: fixed;
+  top: 20%;
   right: 0;
   z-index: 1;
+  display: none;
+}
+
+#services .discount_popup.show{
+  display: block;
+}
+
+.pricing_section_tab .slick-list{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 #services .discount_popup .icon_box {
@@ -1270,7 +1396,83 @@ select option {
   transform: rotate(45deg);
 }
 
+.navbar.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 0px 11px #00000090;
+}
+
+/* CUSTOM SELECT */
+
+.select-hide {
+  display: none;
+}
+
+.customSelect select {
+  display: none; /*hide original SELECT element:*/
+}
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #fff;
+  padding: 11px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+    background-color: var(--red);
+    top: 110%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-radius: 10px;
+}
+
+.select-items div {
+  transition: all 0.4s ease-in-out;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  color: var(--red);
+  background-color:#fff;
+}
+
 @media (max-width: 786px) {
+  
+  .pricing_section_tab .tabs {
+    min-width: 273px;
+  }
   .red-line::after {
     display: none;
   }

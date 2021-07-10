@@ -1,6 +1,39 @@
-$("#floorplanSelect").on("change", function (e) {
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop){
+       $(".navbar").addClass("sticky")
+   } else {
+    $(".navbar").removeClass("sticky")
+   }
+   lastScrollTop = st;
+});
+var lastScrollTop2 = 500;
+$(window).scroll(function(event){
+   var st = $(this).scrollTop();
+   if (st > lastScrollTop2){
+       $(".discount_popup").addClass("show")
+   } else {
+    $(".discount_popup").removeClass("show")
+   }
+   lastScrollTo2 = st;
+});
+$('.count').each(function () {
+  $(this).prop('Counter',0).animate({
+      Counter: $(this).text()
+  }, {
+      duration: 1000,
+      easing: 'swing',
+      step: function (now) {
+          $(this).text(Math.ceil(now));
+      }
+  });
+});
+$("#floorplanSelect p").on("click", function (e) {
   $(".select_tab .tab-pane").removeClass("active in");
-  $("#" + $(e.currentTarget).val()).addClass("active in");
+  console.log($("#" + $(this).attr("data-value")));
+  $(".faq .dropdown-toggle").text($(this).text())
+  $("#" + $(this).attr("data-value")).addClass("active in");
 });
 
 $(".service_tab .tabs").on("click", function () {
@@ -50,31 +83,35 @@ $('.bannerSlider').slick({
   speed: 1000,
   vertical: true,
   verticalSwiping: true,
-  autoplay: false,
+  autoplay: true,
   autoplaySpeed: 4000,
   slidesToShow: 1,
   adaptiveHeight: false,
-  prevArrow: $('.prev'),
-  nextArrow: $('.next'),
+  prevArrow: $('.next'),
+  nextArrow: $('.prev'),
 });
 
 $('.customer_slider').slick({
-  arrows: false,
+  arrows: true,
   dots: true,
   infinite: true,
-  speed: 300,
+  speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
+  prevArrow: $('.nextBtn2'),
+  nextArrow: $('.prevBtn2'),
 });
 
-$('.service_slider').slick({
-  arrows: false,
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 4,
+$(".priceSlider").slick({
+  arrows: true,
+  dots: false,
+  infinite: false,
+  speed: 2000,
+  slidesToShow: 3,
   slidesToScroll: 1,
   centerPadding: '15px',
+  prevArrow: $('.prevBtn3'),
+  nextArrow: $('.nextBtn3'),
   responsive: [
     {
       breakpoint: 1024,
@@ -101,3 +138,54 @@ $('.service_slider').slick({
     }
   ]
 });
+
+$('.service_slider').slick({
+  arrows: true,
+  dots: true,
+  infinite: true,
+  speed: 2000,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  centerPadding: '15px',
+  prevArrow: $('.nextBtn'),
+  nextArrow: $('.prevBtn'),
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
+
+// $(function () {
+//   $("div").slice(0, 4).show();
+//   $("#loadMore").on('click', function (e) {
+//       e.preventDefault();
+//       $("div:hidden").slice(0, 4).slideDown();
+//       if ($("div:hidden").length == 0) {
+//           $("#load").fadeOut('slow');
+//       }
+//       $('html,body').animate({
+//           scrollTop: $(this).offset().top
+//       }, 1500);
+//   });
+// });
