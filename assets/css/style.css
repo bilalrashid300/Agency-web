@@ -1510,7 +1510,12 @@ select option {
 }
 
 @media (max-width: 786px) {
-  
+  .footer-link::after{
+    left: 0px;
+  }
+  .footer-link{
+    padding-left: 20px;
+  }
   .pricing_section_tab .tabs {
     min-width: 273px;
   }

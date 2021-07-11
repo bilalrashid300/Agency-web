@@ -100,7 +100,7 @@ $(".bannerSlider").slick({
     {
       breakpoint: 992,
       settings: {
-        verticalSwiping: true,
+        verticalSwiping: false,
         dots: false,
       },
     },
