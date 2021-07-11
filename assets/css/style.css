@@ -1509,6 +1509,12 @@ select option {
   display:none;
 }
 
+.footer-contact{
+  background: url("../images/banner1.png") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 @media (max-width: 786px) {
   .footer-link::after{
     left: 0px;
