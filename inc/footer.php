@@ -3,7 +3,7 @@
         <div class="container t-white text-md-left text-center">
           <div class="row">
             <div class="col-md-4">
-              <h1 class="d-flex align-items-center">
+              <h1 class="d-flex align-items-center justify-content-md-start justify-content-center">
                 <img
                   class="mr-2"
                   src="./assets/images/email-white.png"
@@ -11,10 +11,10 @@
                 />
                 EMAIL
               </h1>
-              <p class="fs16 mb-md-0 fw-5 mb-3">support@logofold.com</p>
+              <p class="fs16 mb-md-0 fw-5 mb-md-3 mb-4">support@logofold.com</p>
             </div>
             <div class="col-md-4">
-              <h1 class="d-flex align-items-center">
+              <h1 class="d-flex align-items-center justify-content-md-start justify-content-center">
                 <img
                   class="mr-2"
                   src="./assets/images/chat-white.png"
@@ -22,10 +22,10 @@
                 />
                 CONTACT
               </h1>
-              <p class="fs16 mb-md-0 fw-5 mb-3">info@logofold.com</p>
+              <p class="fs16 mb-md-0 fw-5 mb-md-3 mb-4">info@logofold.com</p>
             </div>
             <div class="col-md-4">
-              <h1 class="d-flex align-items-center">
+              <h1 class="d-flex align-items-center justify-content-md-start justify-content-center">
                 <img
                   class="mr-2"
                   src="./assets/images/phone-white.png"
@@ -33,7 +33,7 @@
                 />
                 PHONE
               </h1>
-              <p class="fs16 mb-md-0 fw-5 mb-3">+1-888 - 655 - 5658</p>
+              <p class="fs16 mb-md-0 fw-5 mb-md-3 mb-4">+1-888 - 655 - 5658</p>
             </div>
           </div>
         </div>

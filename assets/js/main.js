@@ -114,8 +114,8 @@ $(".customer_slider").slick({
   speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
-  prevArrow: $(".nextBtn2"),
-  nextArrow: $(".prevBtn2"),
+  prevArrow: $(".prevBtn2"),
+  nextArrow: $(".nextBtn2"),
 });
 
 // $(".priceSlider").slick({
@@ -233,40 +233,48 @@ $(".service_slider").slick({
   ],
 });
 
-var btn = $('#button');
+var btn = $("#button");
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   if ($(window).scrollTop() > 300) {
-    btn.addClass('show');
+    btn.addClass("show");
   } else {
-    btn.removeClass('show');
+    btn.removeClass("show");
   }
 });
 
-btn.on('click', function(e) {
+btn.on("click", function (e) {
   e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '300');
+  $("html, body").animate({ scrollTop: 0 }, "300");
 });
-
-
 
 function loadMore() {
   $(".services_section .tab-content .active.in .col-md-4").slice(0, 6).show();
-  $(".loadMore").on('click', function (e) {
-      e.preventDefault();
-      $(this).parent().parent().find(".col-md-4:hidden").slice(0, 3).slideDown();
-      console.log( $(this).parent().parent().children())
-      if ($(this).parent().parent().find(".col-md-4:hidden").length == 0) {
-          $(this).fadeOut('slow');
-      }
+  $(".loadMore").on("click", function (e) {
+    e.preventDefault();
+    $(this).parent().parent().find(".col-md-4:hidden").slice(0, 3).slideDown();
+    console.log($(this).parent().parent().children());
+    if ($(this).parent().parent().find(".col-md-4:hidden").length == 0) {
+      $(this).fadeOut("slow");
+    }
   });
 }
 
 loadMore();
 
-$(".company_tab .tabs").on("click",function(){
+$(".company_tab .tabs").on("click", function () {
   loadMore();
-})
+});
 
+$(".panel-title").on("click", function () {
+  $(".panel-collapse").removeClass("show");
+  $(this).parent().find(".panel-collapse").toggle("show");
+});
 
-
+$(".accordian_tabs ul li > a").on("click", function () {
+  var id = $(this).attr('href');
+  console.log(id);
+  $(this).parent().parent().parent().parent().next().children().children().removeClass("active");
+  console.log($(this).parent().parent().parent().parent().next().children().find(id));
+  $(this).parent().parent().parent().parent().next().children().find(id).addClass("active")
+});

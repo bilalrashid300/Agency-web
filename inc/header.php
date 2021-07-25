@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="container d-flex border-top mt-md-2 pt-md-2">
-        <a class="navbar-brand" href="#">LOGO<span>FOLD</span></a>
+        <a class="navbar-brand" href="/projects/agency">LOGO<span>FOLD</span></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -95,7 +95,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">HOME</a>
+              <a class="nav-link" href="/projects/agency">HOME</a>
             </li>
             <li class="nav-item dropdown">
               <a
@@ -110,10 +110,9 @@
                 SERVICES
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Action</a>
-                <a class="dropdown-item" href="#">Another action</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="/projects/agency/services.php">Logo Design</a>
+                <a class="dropdown-item" href="#">Development</a>
+                <a class="dropdown-item" href="#">Marketing</a>
               </div>
             </li>
             <li class="nav-item">

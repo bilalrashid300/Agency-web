@@ -1,8 +1,8 @@
 <?php require_once('inc/header.php') ?>
 
-<section class="hero">
+<section class="hero banner">
     <div class="container">
-        <div class="row align-item-center" style="height: 550px">
+        <div class="row align-item-center" style="height: 500px">
             <div class="col-md-7 d-flex flex-column justify-content-center mb-4">
                 <h1 class="hero-title t-white">
                     Elevate your <span class="t-red">Brand</span> with <br />
@@ -436,6 +436,161 @@
 
 <?php require_once('inc/offer_section.php') ?>
 
+<section class="accordian_tabs">
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-md-6 pr-sm-5">
+                <h1 class="hero-title t-blue mb-0">How We Work</h1>
+                <p class="border-bottom-red fs18 fw-7 t-red pb-1">
+                    LOGO DESIGN PROCESS
+                </p>
+                <div id="exTab2">
+                    <ul class="nav nav-tabs mt-4">
+                        <li class="active">
+                            <a href="#1" data-toggle="tab">
+                                <div class="panel-group" id="accordionMenu" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne">
+                                            <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordionMenu" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Design Requirements
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in show" role="tabpanel" aria-labelledby="headingOne">
+                                            <div class="panel-body">
+                                                We believe in delivering the best logo design services packed
+                                                with perfection, dedication, and creativity. When it’s related to
+                                                building a strong brand
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#2" data-toggle="tab">
+                                <div class="panel-group" id="accordionMenu2" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne2">
+                                            <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordionMenu2" href="#collapseOne2" aria-expanded="true" aria-controls="collapseOne2">
+                                                Logo Design Concepts
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne2">
+                                            <div class="panel-body">
+                                                We believe in delivering the best logo design services packed
+                                                with perfection, dedication, and creativity. When it’s related to
+                                                building a strong brand
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#3" data-toggle="tab">
+                                <div class="panel-group" id="accordionMenu3" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne3">
+                                            <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordionMenu3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3">
+                                                Client’s Feedback
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne3">
+                                            <div class="panel-body">
+                                                We believe in delivering the best logo design services packed
+                                                with perfection, dedication, and creativity. When it’s related to
+                                                building a strong brand
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#4" data-toggle="tab">
+                                <div class="panel-group" id="accordionMenu4" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne4">
+                                            <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordionMenu4" href="#collapseOne4" aria-expanded="true" aria-controls="collapseOne4">
+                                                Final Revision
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne4">
+                                            <div class="panel-body">
+                                                We believe in delivering the best logo design services packed
+                                                with perfection, dedication, and creativity. When it’s related to
+                                                building a strong brand
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#5" data-toggle="tab">
+                                <div class="panel-group" id="accordionMenu5" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading" role="tab" id="headingOne5">
+                                            <h4 class="panel-title" role="button" data-toggle="collapse" data-parent="#accordionMenu5" href="#collapseOne5" aria-expanded="true" aria-controls="collapseOne5">
+                                                Logo Design Finalization
+                                            </h4>
+                                        </div>
+                                        <div id="collapseOne5" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne5">
+                                            <div class="panel-body">
+                                                We believe in delivering the best logo design services packed
+                                                with perfection, dedication, and creativity. When it’s related to
+                                                building a strong brand
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tab-content">
+                    <div class="tab-pane active" id="1">
+                        <div class="px-sm-5">
+                            img1
+                            <img class="w-100 animation" src="./assets/images/cms.png" />
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="2">
+                        <div class="px-sm-5">
+                            img2
+                            <img class="w-100 animation" src="./assets/images/cms.png" />
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="3">
+                        <div class="px-sm-5">
+                            img3
+                            <img class="w-100 animation" src="./assets/images/cms.png" />
+                        </div>
+                    </div>
+
+
+                    <div class="tab-pane" id="4">
+                        <div class="px-sm-5">
+                            img4
+                            <img class="w-100 animation" src="./assets/images/cms.png" />
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="5">
+                        <div class="px-sm-5">
+                            img5
+                            <img class="w-100 animation" src="./assets/images/cms.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="bg-blue">
     <div class="container py-5">
         <div class="row">
@@ -444,10 +599,14 @@
                     LOGO DESIGN PACKAGE <span class="fw-5">FOR AS LOW AS</span> <span class="t-red">$29</span>
                 </h1>
             </div>
-            <div class="col-md-6 mb-4 text-right">
+            <div class="col-md-6 mb-4 text-sm-right">
                 <h3 class="border-bottom-red t-white fw-5 w-fit ml-auto">
                     Talk to our representative
                 </h3>
+                <div class="d-flex align-items-center justify-content-sm-end">
+                    <h4 class="t-white mr-1"><span class="fw-5">CLICK HERE TO </span> <br /> LIVE CHAT NOW</h4>
+                    <img src="./assets/images/chat-new.png" style="max-width: 60px" />
+                </div>
             </div>
         </div>
     </div>
